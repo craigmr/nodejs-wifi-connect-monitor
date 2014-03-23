@@ -1,0 +1,24 @@
+{
+  "name": "nodejs-wifi-connect-monitor",
+  "preferGlobal": false,
+  "version": "0.0.0",
+  "author": "Craig Simpson <@_craigmr>",
+  "description": "Node module to detect when devices connect to home wifi by parsing router homepage.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/craigmr/nodejs-wifi-connect-monitor.git"
+  },
+  "keywords": [
+    "wifi",
+    "connection",
+    "monitior"
+  ],
+  "dependencies" : {
+  },
+  "devDependencies": {
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.10"
+  }
+}
