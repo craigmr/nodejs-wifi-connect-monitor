@@ -19,12 +19,12 @@
     });
 
     monitor.on(DeviceMonitor.ADD, function onDeviceAdd(device){
-        winston.info('added', device);
+        winston.info('add', device);
         io.sockets.emit('add', device);
     });
 
     monitor.on(DeviceMonitor.REMOVE, function onDeviceRemove(device){
-        winston.info('removed', device);
+        winston.info('remove', device);
         io.sockets.emit('remove', device);
     });
 
