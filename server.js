@@ -2,7 +2,14 @@
     'use strict';
     var io = require('socket.io').listen(3030);
     var winston = require('winston');
+    var winstonCouch = require('winston-couchdb').Couchdb;
+
     winston.add(winston.transports.File, { filename: 'wifi-device.log' });
+    winston.add(winstonCouch, {
+        host: 'localhost',
+        port: 5984,
+        db: 'presence'
+    });
 
     var DeviceMonitor = require('./lib/monitor.js');
 
