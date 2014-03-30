@@ -1,6 +1,9 @@
 (function(){
     'use strict';
-    var io = require('socket.io').listen(3030);
+    var app = require('express').createServer();
+    var io = require('socket.io').listen(app);
+
+    //Setup logging to file and couchdb
     var winston = require('winston');
     var winstonCouch = require('winston-couchdb').Couchdb;
 
@@ -10,6 +13,8 @@
         port: 5984,
         db: 'presence'
     });
+
+    app.listen(3030);
 
     var DeviceMonitor = require('./lib/monitor.js');
 
@@ -37,5 +42,9 @@
 
     monitor.on(DeviceMonitor.ERROR, function onMonitorError(error){
         winston.error(error);
+    });
+
+    app.get('/devices', function(req, res){
+        res.send(monitor.connectedDevices);
     });
 })();

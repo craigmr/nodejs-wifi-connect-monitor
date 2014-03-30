@@ -19,7 +19,8 @@
     "socket.io": "^0.9.16",
     "socket.io-client": "^0.9.16",
     "winston": "^0.7.3",
-    "winston-couchdb": "^0.6.2"
+    "winston-couchdb": "^0.6.2",
+    "express": "^3.5.1"
   },
   "devDependencies": {},
   "license": "MIT",
