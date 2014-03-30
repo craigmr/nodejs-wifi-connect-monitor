@@ -1,7 +1,10 @@
 (function(){
     'use strict';
-    var app = require('express').createServer();
-    var io = require('socket.io').listen(app);
+    var express = require('express');
+    var app = express();
+    var httpSer= app.listen(3030);
+
+    var io = require('socket.io').listen(httpSer);
 
     //Setup logging to file and couchdb
     var winston = require('winston');
@@ -13,8 +16,6 @@
         port: 5984,
         db: 'presence'
     });
-
-    app.listen(3030);
 
     var DeviceMonitor = require('./lib/monitor.js');
 
