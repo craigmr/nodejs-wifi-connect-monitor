@@ -22,7 +22,11 @@
     "winston-couchdb": "^0.6.2",
     "express": "^3.5.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "chai": "^1.9.1",
+    "sinon": "^1.9.0",
+    "sinon-chai": "^2.5.0"
+  },
   "license": "MIT",
   "engines": {
     "node": ">=0.10"
