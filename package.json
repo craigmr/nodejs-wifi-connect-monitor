@@ -1,7 +1,7 @@
 {
   "name": "nodejs-wifi-connect-monitor",
   "preferGlobal": false,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "author": "Craig Simpson <@_craigmr>",
   "description": "Node module to detect when devices connect to home wifi by parsing router homepage.",
   "repository": {
