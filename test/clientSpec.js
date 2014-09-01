@@ -72,4 +72,10 @@ describe('NetworkMonitorClient', function(){
             test = expect(onRemove).to.have.not.been.called;
         });
     });
+
+    describe('ignores dispatching events during certain time', function(){
+        it('set time in config', function(){
+
+        });
+    });
 });
